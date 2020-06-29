@@ -1,8 +1,9 @@
 import React from "react";
+import "./styles/HomePage.css";
 
 function HomePage() {
   return (
-    <div className="homePage">
+    <div id="home" className="homePage">
       <h1>home page</h1>
     </div>
   );
