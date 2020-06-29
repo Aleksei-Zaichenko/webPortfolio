@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
 import AboutMePage from "./components/AboutMePage";
-import PortfolioProjectPage from "./components/PortfioProjectsPage";
+import PortfolioProjectPage from "./components/PortfolioProjectsPage";
 import ContactMepage from "./components/ContactMePage";
 
 //react bootstrap components
