@@ -3,7 +3,7 @@ import React, { useState } from "react";
 //Imports for the style
 import "./styles/PortfolioProjectsPage.css";
 
-import { CardGroup, Card } from "react-bootstrap";
+import { CardGroup, Card, ListGroup } from "react-bootstrap";
 
 function PortfolioProjectsPage() {
   const [projects, setProjects] = useState([
@@ -26,7 +26,12 @@ function PortfolioProjectsPage() {
               <Card.Title>{project}</Card.Title>
             </Card.Body>
             <Card.Footer className="cardFooter">
-              <medium>Clicks to see the description</medium>
+              <Card.Text>jsklndflskdnf;lskdnf'lksdnf'lskdnf'skdnf</Card.Text>
+              <div className="listOfTechnologies">Technologies used:</div>
+              <ListGroup>
+                <ListGroup.Item>React</ListGroup.Item>
+                <ListGroup.Item>Bootstrap</ListGroup.Item>
+              </ListGroup>
             </Card.Footer>
           </Card>
         ))}
