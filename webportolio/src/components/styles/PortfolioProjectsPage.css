@@ -1,0 +1,16 @@
+.portfolioProjectsPage {
+  background-color: khaki;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.singleCard {
+  width: 30%;
+  margin: 4% 4% 2% 2%;
+  border: 1px solid black;
+}
