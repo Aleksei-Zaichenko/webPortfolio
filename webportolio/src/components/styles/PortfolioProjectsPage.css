@@ -14,3 +14,10 @@
   margin: 4% 4% 2% 2%;
   border: 1px solid black;
 }
+.cardBody:hover + .cardFooter {
+  display: block;
+}
+
+.cardFooter {
+  display: none;
+}

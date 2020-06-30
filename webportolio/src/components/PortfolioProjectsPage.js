@@ -21,10 +21,13 @@ function PortfolioProjectsPage() {
       <CardGroup className="cardGroup">
         {projects.map((project) => (
           <Card bsPrefix="singleCard">
-            <Card.Body>
+            <Card.Body className="cardBody">
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Title>{project}</Card.Title>
             </Card.Body>
+            <Card.Footer className="cardFooter">
+              <medium>Clicks to see the description</medium>
+            </Card.Footer>
           </Card>
         ))}
       </CardGroup>
