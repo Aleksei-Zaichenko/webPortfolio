@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { GoMarkGithub } from "react-icons/go";
 //Imports for the style
 import "./styles/PortfolioProjectsPage.css";
 import spotifySongsSuggester from "./images/spotifySuggester.jpg";
@@ -47,9 +47,11 @@ function PortfolioProjectsPage() {
                 style={{ display: "block", margin: "2% 0" }}
                 href={project.deployedLink}
               >
-                Deployed Link
+                Deployed link
               </a>
-              <a href={project.githubRepo}>GitHub repository</a>
+              <a href={project.githubRepo}>
+                <GoMarkGithub style={{ color: "black" }} /> repository
+              </a>
             </Card.Body>
             <Card.Footer className="cardFooter">
               <Card.Text>{project.description}</Card.Text>
