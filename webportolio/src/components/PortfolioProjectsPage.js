@@ -5,6 +5,8 @@ import { GoMarkGithub } from "react-icons/go";
 import "./styles/PortfolioProjectsPage.css";
 import spotifySongsSuggester from "./images/spotifySuggester.jpg";
 import clocks from "./images/clocks.jpg";
+import gameoflive from "./images/GameOfLife.jpg";
+import budgetBlocks from "./images/budgetBlocks.jpg";
 
 import { CardGroup, Card, ListGroup } from "react-bootstrap";
 
@@ -41,6 +43,29 @@ function PortfolioProjectsPage() {
       deployedLink: "https://aleksei-zaichenko.github.io/Clocks/",
       githubRepo: "https://github.com/Aleksei-Zaichenko/Clocks",
       usedTechnologies: ["React", "Moment library"],
+    },
+    {
+      title: "Game Of Live",
+      img: gameoflive,
+      description:
+        "This app recommends a user the songs based on the searched ones. This project was created during one of build weeks in Lambda programming bootcamp. \
+        When it was time to handle in that app it was not ready even for 50%. \
+        I got very interested and passinate about that project and completed as much as I could on my own. Initially I was backend developer for that project.",
+      deployedLink: "https://aleksei-zaichenko.github.io/Game-Of-Life/",
+      githubRepo:
+        "https://github.com/Aleksei-Zaichenko/Game-Of-Life/tree/master/game-of-life",
+      usedTechnologies: ["React"],
+    },
+    {
+      title: "Budget Blocks",
+      img: budgetBlocks,
+      description:
+        "This app recommends a user the songs based on the searched ones. This project was created during one of build weeks in Lambda programming bootcamp. \
+        When it was time to handle in that app it was not ready even for 50%. \
+        I got very interested and passinate about that project and completed as much as I could on my own. Initially I was backend developer for that project.",
+      deployedLink: "https://www.budgetblocks.org/",
+      githubRepo: "https://github.com/Lambda-School-Labs/budget-blocks-fe",
+      usedTechnologies: ["React"],
     },
   ]);
 
