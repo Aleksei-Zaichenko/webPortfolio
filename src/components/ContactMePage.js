@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./styles/ContactMePage.css";
 
@@ -7,6 +7,22 @@ import { GrLinkedin } from "react-icons/gr";
 import { GoMarkGithub } from "react-icons/go";
 
 function ContactMePage() {
+  const [userMessage, setuserMessage] = useState({
+    name: "",
+    email: "",
+    message: "",
+    mailSent: false,
+    error: null,
+  });
+
+  const handleChange = (event) => {
+    setuserMessage({ ...userMessage, [event.target.name]: event.target.value });
+  };
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
     <div id="contact" className="contactMePage">
       <h4 id="thankfulHeader">Thanks for visiting</h4>
@@ -32,19 +48,14 @@ function ContactMePage() {
         <div id="containerForMessageForm">
           <h5 style={{ textAlign: "center" }}>Or send me a message</h5>
           <form id="messageForm" action="/action_page.php">
-            <label>First Name</label>
+            <label>Your Name</label>
             <input
               type="text"
-              id="fname"
-              name="firstname"
+              id="name"
+              name="name"
+              value={userMessage.name}
               placeholder="Your name.."
-            />
-            <label>Last Name</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="Your last name.."
+              onChange={(event) => handleChange(event)}
             />
 
             <label>Email</label>
@@ -52,17 +63,32 @@ function ContactMePage() {
               type="email"
               id="email"
               name="email"
+              value={userMessage.email}
               placeholder="Your email"
+              onChange={(event) => handleChange(event)}
             />
 
             <label>Message</label>
             <textarea
-              id="subject"
-              name="subject"
+              id="message"
+              name="message"
+              value={userMessage.message}
               placeholder="Your message.."
+              onChange={(event) => handleChange(event)}
             ></textarea>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <input id="submitButton" type="submit" value="Submit" />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "1%",
+              }}
+            >
+              <input
+                id="submitButton"
+                type="submit"
+                value="Submit"
+                onClick={(e) => handleFormSubmit(e)}
+              />
             </div>
           </form>
         </div>

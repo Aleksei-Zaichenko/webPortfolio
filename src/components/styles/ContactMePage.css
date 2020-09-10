@@ -28,6 +28,16 @@
 #submitButton {
   font-weight: bold;
   width: 30%;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  background-color: #ffa049;
 }
 
 #containerForLinks {
