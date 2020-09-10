@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import axios from "axios";
 
+// imort for stylings
 import "./styles/ContactMePage.css";
 
 // imports for the icons
 import { GrLinkedin } from "react-icons/gr";
 import { GoMarkGithub } from "react-icons/go";
 
+const API_PATH = "http://localhost/portfolio/backEnd/index.php";
+
 function ContactMePage() {
-  const [userMessage, setuserMessage] = useState({
+  const [userMessage, setUserMessage] = useState({
     name: "",
     email: "",
     message: "",
@@ -16,11 +20,26 @@ function ContactMePage() {
   });
 
   const handleChange = (event) => {
-    setuserMessage({ ...userMessage, [event.target.name]: event.target.value });
+    setUserMessage({ ...userMessage, [event.target.name]: event.target.value });
   };
 
   function handleFormSubmit(event) {
     event.preventDefault();
+    axios({
+      method: "post",
+      url: `${API_PATH}`,
+      headers: { "content-type": "application/json" },
+      data: userMessage,
+    })
+      .then((result) => {
+        userMessage({
+          ...userMessage,
+          mailSent: result.data.sent,
+        });
+      })
+      .catch((error) =>
+        setUserMessage({ ...userMessage, error: error.message })
+      );
   }
 
   return (
@@ -47,7 +66,7 @@ function ContactMePage() {
 
         <div id="containerForMessageForm">
           <h5 style={{ textAlign: "center" }}>Or send me a message</h5>
-          <form id="messageForm" action="/action_page.php">
+          <form id="messageForm" action="#">
             <label>Your Name</label>
             <input
               type="text"
@@ -76,6 +95,7 @@ function ContactMePage() {
               placeholder="Your message.."
               onChange={(event) => handleChange(event)}
             ></textarea>
+
             <div
               style={{
                 display: "flex",
@@ -89,6 +109,9 @@ function ContactMePage() {
                 value="Submit"
                 onClick={(e) => handleFormSubmit(e)}
               />
+            </div>
+            <div>
+              {userMessage.mailSent && <div>Thank you for contacting.</div>}
             </div>
           </form>
         </div>
