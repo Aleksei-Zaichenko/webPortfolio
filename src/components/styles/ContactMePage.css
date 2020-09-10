@@ -1,0 +1,15 @@
+.contactMePage {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+#thankfulHeader {
+  text-align: center;
+  margin-top: 4.5%;
+}
+
+#linksToExternalProfiles {
+  display: flex;
+  border: 3px solid red;
+}

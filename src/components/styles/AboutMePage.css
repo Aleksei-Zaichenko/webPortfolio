@@ -1,0 +1,13 @@
+.aboutMePage {
+  background-color: lightgrey;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100vh;
+}
+#threeRules {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-top: 3%;
+}

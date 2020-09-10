@@ -13,23 +13,23 @@ import ContactMepage from "./components/ContactMePage";
 //react bootstrap components
 import "bootstrap/dist/css/bootstrap.min.css";
 
-class PageSection extends Component {
-  render() {
-    return this.props.content;
-  }
-}
+// class PageSection extends Component {
+//   render() {
+//     return this.props.content;
+//   }
+// }
 
-PageSection.propTypes = {
-  content: PropTypes.node.isRequired,
-};
+// PageSection.propTypes = {
+//   content: PropTypes.node.isRequired,
+// };
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <HomePage />
-      <PortfolioProjectPage />
       <AboutMePage />
+      <PortfolioProjectPage />
       <ContactMepage />
     </div>
   );

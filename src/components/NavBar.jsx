@@ -17,21 +17,20 @@ export default function NavBar() {
         </Navbar.Brand>
         <Navbar.Brand>
           <Scrollchor
-            to="#projects"
-            // afterAnimate={() => updateState(this)}
-            animate={{ offset: 20, duration: 600 }}
-            className="nav-link"
-          >
-            Projects
-          </Scrollchor>
-        </Navbar.Brand>
-        <Navbar.Brand>
-          <Scrollchor
             to="#aboutme"
             animate={{ offset: 20, duration: 600 }}
             className="nav-link"
           >
             About Me
+          </Scrollchor>
+        </Navbar.Brand>
+        <Navbar.Brand>
+          <Scrollchor
+            to="#projects"
+            animate={{ offset: 20, duration: 600 }}
+            className="nav-link"
+          >
+            Projects
           </Scrollchor>
         </Navbar.Brand>
         <Navbar.Brand>
