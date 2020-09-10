@@ -1,6 +1,7 @@
 .contactMePage {
   display: flex;
   flex-flow: column;
+  align-content: center;
   height: 100vh;
 }
 
@@ -9,7 +10,34 @@
   margin-top: 4.5%;
 }
 
-#linksToExternalProfiles {
+#contactContainer {
   display: flex;
-  border: 3px solid red;
+  justify-content: space-evenly;
+  margin: 1% 5% 5% 5%;
+}
+
+#containerForMessageForm {
+  width: 50%;
+}
+
+#messageForm {
+  display: flex;
+  flex-flow: column;
+}
+
+#submitButton {
+  font-weight: bold;
+  width: 30%;
+}
+
+#containerForLinks {
+  display: flex;
+  justify-content: center;
+}
+
+#linksToExternalProfiles {
+  font-size: 1.6rem;
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
 }
